@@ -1,8 +1,8 @@
 <template>
     <div class="word">
-        <span v-for="(letter, i) in correctLetters" :key="letter">
-            {{ correctLetters.includes(letter) ? letter : ''}}
-        </span>
+        <div v-for="(letter,i) in letters" class="letter" :class="['letter', letter === ' ' ? '' : 'letter-border']">
+            <span v-if="correctLetters.includes(letter)">{{ letter }}</span>
+        </div>
     </div>
 </template>
 
@@ -14,3 +14,4 @@ export default {
     }
 }
 </script>
+

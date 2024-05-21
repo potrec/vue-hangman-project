@@ -21,7 +21,7 @@ import LettersList from './components/LettersList.vue';
 import Notification from './components/Notification.vue';
 import Popup from './components/Popup.vue';
 
-const words = ['test','test2','test3']
+const words = ['big red octopus', 'cute small kitten']
 const randomWord = () => words[Math.floor(Math.random() * words.length)]
 
 export default {
@@ -43,7 +43,7 @@ export default {
 
     const status = computed(() => {
       if(wrongLetters.value.length === 6) return 'lose'
-      if(letters.value.every(l => correctLetters.value.includes(l))) return 'win'
+      if(letters.value.filter(l => l != ' ').every(l => correctLetters.value.includes(l))) return 'win'
       return ''
     })
 
