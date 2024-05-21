@@ -2,8 +2,8 @@
     <Header/>
     <div class= "game-container">
       <Figure :wrongLetters="wrongLetters"/>
-      <WrongLetters :wrongLetters="wrongLetters"/>
-      <Word :letters="letters" :correct-letters="correctLetters"/>
+      <LettersList :wrongLetters="wrongLetters" :correctLetters="correctLetters"/>
+      <Word :letters="letters" :correctLetters="correctLetters"/>
     </div>
     <Popup :status="status" :word="word" @reset="reset"/>
     <Notification :show="notification"/>
@@ -17,7 +17,7 @@ import onkeydown from './assets/onKeydown.js'
 import Figure from './components/Figure.vue';
 import Header from './components/Header.vue';
 import Word from './components/Word.vue';
-import WrongLetters from './components/WrongLetters.vue';
+import LettersList from './components/LettersList.vue';
 import Notification from './components/Notification.vue';
 import Popup from './components/Popup.vue';
 
@@ -29,7 +29,7 @@ export default {
     Header,
     Figure,
     Word,
-    WrongLetters,
+    LettersList,
     Notification,
     Popup
   },
