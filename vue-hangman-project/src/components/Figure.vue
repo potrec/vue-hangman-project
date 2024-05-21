@@ -21,10 +21,10 @@
   
   <script>
   export default {
-    props: { wrongCount: { type: Number, default: 0 } },
+    props: { wrongCount: { type: Number, default: 5 } },
     setup(props) {
       const lte = num => props.wrongCount >= num
       return { lte }
-    }
+    },
   }
   </script>

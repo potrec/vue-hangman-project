@@ -9,7 +9,7 @@
 <script>
 export default {
     props: {
-        letters: { type: Array, default: () => []}
+        letters: { type: Array, default: () => []},
         correctLetters: { type: Array, default: () => []}
     }
 }
