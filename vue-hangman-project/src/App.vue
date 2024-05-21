@@ -38,15 +38,10 @@ export default {
     const guessedLetters = ref([])
 
     const letters = computed(() => word.value.split(''))
-    const wrongLetters = computed(() => {
-      guessedLetters.value.filter(l => !letters.value.includes(l))
-    })
-    const correctLetters = computed(() => {
-      guessedLetters.value.filter(l => letters.value.includes(l))
-    })
+    const wrongLetters = computed(() => guessedLetters.value.filter(l => !letters.value.includes(l)))
+    const correctLetters = computed(() => guessedLetters.value.filter(l => letters.value.includes(l)))
 
     const status = computed(() => {
-      if(!wrongLetters.value) return ''
       if(wrongLetters.value.length === 6) return 'lose'
       if(letters.value.every(l => correctLetters.value.includes(l))) return 'win'
       return ''
