@@ -1,7 +1,7 @@
 <template>
     <Header/>
     <div class= "game-container">
-      <Figure :wrongLetters="wrongLetters"/>
+      <Figure :wrongCount="wrongLetters.length"/>
       <LettersList :wrongLetters="wrongLetters" :correctLetters="correctLetters"/>
       <Word :letters="letters" :correctLetters="correctLetters"/>
     </div>
