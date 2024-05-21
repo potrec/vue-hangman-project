@@ -1,6 +1,6 @@
 <template>
     <div class="word">
-        <span v-for="(letter, i) in wrongLetters" :key="letter">
+        <span v-for="(letter, i) in correctLetters" :key="letter">
             {{ correctLetters.includes(letter) ? letter : ''}}
         </span>
     </div>
